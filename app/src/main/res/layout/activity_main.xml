@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/qr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="16dp"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/texto_del_c_digo_qr"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnGenerateQR"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/generar_c_digo_qr"
+        android:textAllCaps="false"
+        android:layout_below="@id/qr"/>
+
+    <Button
+        android:id="@+id/btnReadQR"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/leer_c_digo_qr"
+        android:textAllCaps="false"
+        android:layout_below="@id/btnGenerateQR"/>
+
+    <ImageView
+        android:id="@+id/ivQR"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="#1B2C2926"
+        android:layout_below="@id/btnReadQR"
+        android:contentDescription="@string/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

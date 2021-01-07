@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RAG QR</string>
+    <string name="texto_del_c_digo_qr">Texto del código QR</string>
+    <string name="leer_c_digo_qr">Leer código QR</string>
+    <string name="generar_c_digo_qr">Generar código QR</string>
+    <string name="no_data">No hay datos</string>
+</resources>
