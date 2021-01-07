@@ -22,9 +22,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btnGenerateQR ->{
                 val code = findViewById<EditText>(R.id.etQR)
                 val img = findViewById<ImageView>(R.id.ivQR)
-                val barcodeEncoder = BarcodeEncoder()
-                val bitmap = barcodeEncoder.encodeBitmap(code.text.toString(), BarcodeFormat.QR_CODE, 400, 400)
-                img.setImageBitmap(bitmap)
+                if (code.text.isNotEmpty()){
+                    val barcodeEncoder = BarcodeEncoder()
+                    val bitmap = barcodeEncoder.encodeBitmap(code.text.toString(), BarcodeFormat.QR_CODE, 400, 400)
+                    img.setImageBitmap(bitmap)
+                } else {
+                    Toast.makeText(this, "Ingrese el dato a codificar", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
